@@ -1,0 +1,10 @@
+Create conda env
+
+https://learn.microsoft.com/en-us/azure/machine-learning/how-to-access-terminal#add-new-kernels
+
+conda create --name pf_reviews
+conda activate pf_reviews
+conda install pip matplotlib pandas sklearn numpy
+pip install 
+conda install ipykernel
+python -m ipykernel install --user --name newenv --display-name "Python (newenv)
