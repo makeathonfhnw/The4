@@ -5,15 +5,10 @@ import pandas as pd
 import numpy as np
 
 # %%
-
-
-
 df = pd.read_csv(r"C:\Users\tmand\OneDrive\Dokumente\Github\MaKEathonPostFinance\data\tweets_ats.csv")
-
 # %%
 print(df.head())
 #%%
-# n = 100
 n = len(df)
 lanlist = []
 for i in range(n):
