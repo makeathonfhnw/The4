@@ -18,7 +18,7 @@ def GetDataframeStores(df_play, df_app):
     app_liste = ["date", "title", "review", "rating"]
     df_app = df_app[app_liste]
     df_app["content"] = df_app["title"] + ": " + df_app["review"]
-    df_app = df_app[["rating", "content"]]
+    df_app = df_app[["rating", "content", "date"]]
 
     # Playstore DatenFarme bearbeiten
     play_list = ['at', 'score', "content"]
