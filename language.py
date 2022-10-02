@@ -21,12 +21,11 @@ unique, counts = np.unique(df["language_prob"], return_counts=True)
 count_sort_ind = np.argsort(-counts)
 unique= unique[count_sort_ind]
 counts = counts[count_sort_ind]
+# color = ['blue',"green"]
 plt.bar(unique,counts)
+plt.xlabel("Count of Language")
+plt.ylabel("Languages in Tweets")
 plt.show()
-# %%
-plt.hist(df["language_prob"])
-for i, v in enumerate(counts):
-    plt.text(v, i, " "+str(v), color='blue', va='center', fontweight='bold') 
-plt.show()
-# %%
+plt.savefig('output.png')
 
+# %%
