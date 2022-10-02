@@ -15,15 +15,15 @@ def GetDataframeTweets(df):
 
 def GetDataframeStores(df_play, df_app):
     ##
-    app_liste = ["title", "review", "rating"]
+    app_liste = ["date", "title", "review", "rating"]
     df_app = df_app[app_liste]
     df_app["content"] = df_app["title"] + ": " + df_app["review"]
     df_app = df_app[["rating", "content"]]
 
     # Playstore DatenFarme bearbeiten
-    play_list = ['score', "content"]
+    play_list = ['at', 'score', "content"]
     df_play = df_play[play_list]
-    df_play = df_play.rename(columns={"score": "rating"})
+    df_play = df_play.rename(columns={"score": "rating", "at": "date"})
     df = pd.concat([df_app, df_play], axis = 0)
 
     df["content"].fillna("",inplace=True)
